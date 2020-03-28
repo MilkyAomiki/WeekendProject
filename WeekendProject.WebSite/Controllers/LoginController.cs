@@ -12,7 +12,7 @@ namespace Weekend.WebSite.Controllers
     {
         private readonly IUser user;
 
-        public LoginController(IUser user)
+        public LoginController(IUser user) 
         {
             this.user = user;
         }
