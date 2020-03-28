@@ -7,8 +7,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Weekend.BLL.Interfaces;
+using Weekend.BLL.Services;
+using Weekend.BLL.DI;
 
-namespace WeekendProject.WebSite
+namespace Weekend.WebSite
 {
     public class Startup
     {
@@ -16,6 +19,10 @@ namespace WeekendProject.WebSite
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            DIModule dIModule = new DIModule();
+            services.AddMvc(options => options.EnableEndpointRouting = false);
+            services.AddTransient<IUser, UserService>(options => new UserService(dIModule.ConfigureContext()));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -28,13 +35,7 @@ namespace WeekendProject.WebSite
 
             app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+            app.UseMvc(route => { route.MapRoute("login", "{controller=Login}/{action=LogIn}/{id?}"); route.MapRoute("registration", "{controller=Login}/{action=SignUp}/{id}"); });  
         }
     }
 }
