@@ -17,7 +17,7 @@ namespace Weekend.BLL.Services
         {
             this.context = context;
         }
-        public bool Authtoriztiion(UserLoginFormDTO userLoginForm)
+        public bool Authtorizatiion(UserLoginFormDTO userLoginForm)
         {
             bool isExist;
             var user = context.UserLoginForm.Where(p => p.Login == userLoginForm.Login && p.Password == userLoginForm.Password).FirstOrDefault();
@@ -38,14 +38,15 @@ namespace Weekend.BLL.Services
             return new UserDTO { Login = user.Login, FirstName = user.FirstName, LastName = user.LastName, Birthday = user.Birthday, Sex = user.Sex, Relationship = user.Relationship, Language = user.Language, Avatar = user.Avatar };
         }
 
-        public bool Registration(UserLoginFormDTO userLoginForm)
+        public bool Registration(UserLoginFormDTO userLoginForm, UserDTO user)
         {
 
             UserLoginForm newUser = new UserLoginForm { Login = userLoginForm.Login, Password = userLoginForm.Password };
             context.UserLoginForm.Add(newUser);
-            var user = new User { Login = userLoginForm.Login };
-            context.User.Add(user);
             context.SaveChanges();
+            User user1 = new User { Login = user.Login, Birthday = user.Birthday, FirstName = user.FirstName, LastName = user.LastName };
+            context.User.Add(user1);
+            context.SaveChangesAsync();
             return true;
 
         }

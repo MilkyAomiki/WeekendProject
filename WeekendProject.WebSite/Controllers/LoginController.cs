@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Weekend.BLL.Interfaces;
+using Weekend.BLL.DTO;
 
 namespace Weekend.WebSite.Controllers
 {
@@ -17,16 +18,20 @@ namespace Weekend.WebSite.Controllers
         }
 
         [HttpPost]
-        public IActionResult LogInConfirm()
+        public IActionResult LogInConfirm(UserLoginFormDTO user)
         {
-                
-            return View();
+            var confirmed = this.user.Authtorizatiion(user);
+            int statusCode = confirmed ? 200 : 204;
+            return StatusCode(statusCode);
         }
 
         [HttpPost]
-        public IActionResult SignUpConfirm()
+        public void SignUpConfirm(string Email, string fName, string lName, DateTime date, string password)
         {
-            return View();
+            UserLoginFormDTO userLogin = new UserLoginFormDTO { Login = Email, Password = password };
+            UserDTO user = new UserDTO { Login = Email, Birthday = date, FirstName = fName, LastName = lName };
+            this.user.Registration(userLogin, user);
+            Response.Redirect("/");
         }
 
         [HttpGet("/")]

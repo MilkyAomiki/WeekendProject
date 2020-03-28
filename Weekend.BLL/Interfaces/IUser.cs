@@ -5,11 +5,14 @@ using Weekend.BLL.DTO;
 
 namespace Weekend.BLL.Interfaces
 {
+    /// <summary>
+    /// Main functionality for user authtorization
+    /// </summary>
     public interface IUser
     {
-        public bool Registration(UserLoginFormDTO userLoginForm);
+        public bool Registration(UserLoginFormDTO userLoginForm, UserDTO user);
         public UserDTO GetUser(string login);
-        public bool Authtoriztiion(UserLoginFormDTO userLoginForm);
+        public bool Authtorizatiion(UserLoginFormDTO userLoginForm);
 
     }
 }
