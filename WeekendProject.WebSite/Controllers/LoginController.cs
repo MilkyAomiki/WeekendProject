@@ -29,13 +29,13 @@ namespace Weekend.WebSite.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpGet("/")]
         public IActionResult LogIn()
         {
             return View();
         }
 
-        [HttpGet("/")]
+        [HttpGet("/SignUp")]
         public IActionResult SignUp()
         {
 

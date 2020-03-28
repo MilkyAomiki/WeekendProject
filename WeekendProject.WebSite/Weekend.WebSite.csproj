@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <None Include="wwwroot\bg.jpg" />
+    <None Include="wwwroot\LoginCss.css" />
+    <None Include="wwwroot\Logo.svg" />
   </ItemGroup>
 
   <ItemGroup>

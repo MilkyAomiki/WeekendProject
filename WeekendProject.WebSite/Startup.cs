@@ -32,7 +32,7 @@ namespace Weekend.WebSite
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseMvc(route => { route.MapRoute("login", "{controller=Login}/{action=LogIn}/{id?}"); route.MapRoute("registration", "{controller=Login}/{action=SignUp}/{id}"); });  
