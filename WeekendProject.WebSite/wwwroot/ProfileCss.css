@@ -60,7 +60,7 @@ width: 100px;
 height: 35px;
 margin-right: 20px;}
 
-#Profile img:nth-child(3) {margin-right: 20px;}
+#Profile a:nth-child(3) {margin-right: 20px;}
 
 .Myprofile {font-family: Roboto;
     width: 60px;
