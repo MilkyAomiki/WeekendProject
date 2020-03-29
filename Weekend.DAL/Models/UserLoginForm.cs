@@ -7,6 +7,7 @@ namespace Weekend.DAL.Models
     {
         [Key]
         [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         [StringLength(50)]
         public string Login { get; set; }
         [Required]

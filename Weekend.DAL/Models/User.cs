@@ -7,7 +7,8 @@ namespace Weekend.DAL.Models
 {
     public partial class User
     {
-        [Key]
+        [ForeignKey("Login")]
+        [EmailAddress]
         [DataType(DataType.EmailAddress)]
         [StringLength(50)]
         public string Login { get; set; }
@@ -24,6 +25,7 @@ namespace Weekend.DAL.Models
         public string Sex { get; set; }
         [StringLength(50)]
         public string Language { get; set; }
+     
         [StringLength(50)]
         public string Relationship { get; set; }
         [Column(TypeName = "image")]
