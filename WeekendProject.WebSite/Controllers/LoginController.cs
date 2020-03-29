@@ -57,5 +57,10 @@ namespace Weekend.WebSite.Controllers
 
             return View();
         }
+
+        public IActionResult LogOut()
+        {
+            return Redirect("/");
+        }
     }
 }
