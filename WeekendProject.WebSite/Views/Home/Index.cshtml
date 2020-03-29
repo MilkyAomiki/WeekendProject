@@ -1,5 +1,4 @@
-﻿@using Weekend.BLL.DTO
-@model UserDTO
+﻿
 @{
     ViewData["Title"] = "Index";
 }
@@ -9,51 +8,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@(Model.FirstName +" "+ Model.LastName)</title>
-    <link rel="stylesheet" href="~/ProfileCss.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="ProfileCss.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,500&display=swap" 
     rel="stylesheet">
-    <script src="~/script.js" defer></script>
 </head>
 <body>
+    <main>
     <aside>
-    <img src="~/Logo.svg" class="Logo">
+    <img src="logo.svg" class="Logo">
 
     <div id="Profile">
-    <img src="~/Ava.jpg" class="ava">
+    <img src="Ava.jpg" class="ava">
 
     <div class="dd"> 
-    <p class="name">@(Model.FirstName +" "+ Model.LastName)</p>
+    <p class="name">Kirill Sabaev</p>
     <p class="Myprofile">My profile</p>
     </div>
 
-    <img src="~/Settings.svg">
+    <img src="Settings.svg">
     </div>
 
     <ul>
-        <li class="li1"><a href="" onmousemove="querySelector('img').src='~/News1.svg'" onmouseleave="querySelector('img').src='~/News.svg'">
-        <img src="~/News.svg" alt="" class="carts"><span>News</span></li>
-            
-        <li><img src="~/Message.svg"><a href="#">Messages</a></li>
-        <li><img src="~/Friends.svg"><a href="#">Friends</a></li>
-        <li><img src="~/Communities.svg"><a href="#">Communitites</a></li>
-        <li><img src="~/Music.svg"><a href="#">Music</a></li>
-        <li><img src="~/Photo.svg"><a href="#">Photos</a></li>
-        <li><img src="~/Video.svg"><a href="#">Videos</a></li>
+        <li class="li1"><img src="News.svg" alt=""><a>News</a></li> 
+        <li><img src="Message.svg"><a href="#">Messages</a></li>
+        <li><img src="Friends.svg"><a href="#">Friends</a></li>
+        <li><img src="Communities.svg"><a href="#">Communitites</a></li>
+        <li><img src="Music.svg"><a href="#">Music</a></li>
+        <li><img src="Photo.svg"><a href="#">Photos</a></li>
+        <li><img src="Video.svg"><a href="#">Videos</a></li>
     </ul>
 
     <div class="audio">
-        <img src="~/Audio.jpg" class="Cover">
+        <img src="Audio.jpg" class="Cover">
 
         <div class="NameOfMusic">
         <p class="Artist">unxknow</p>
         <p class="SoundName">На корвалоле</p>
         </div>
 
-        <img src="~/Arrow-left.svg" class="Arrow-left">
-        <img src="~/Pause.svg" class="Pause">
-        <img src="~/Arrow-right.svg" class="Arrow-right">
-    </div> 
+        <img src="Arrow-left.svg" class="Arrow-left">
+        <img src="Pause.svg" class="Pause">
+        <img src="Arrow-right.svg" class="Arrow-right">
+    </div>
     </aside>
+
+    <section id="MyPage">
+        <div class="Info">
+        <img src="Ava.jpg" class="Avatar">
+
+        <div class="dd3">
+        <div class="Imya">
+        <h1>Kirill Sabaev</h1>
+        <p class="online">Last seen 1 hour ago</p>
+        </div>
+
+        <div class="status"><p>Dead inside</p></div>
+        
+        <div class="dd2">
+        <ul>
+            <li>
+                <p class="Question">Sex:</p>
+                <div class="Answer">Male</div>
+            </li>
+
+            <li>
+                <p class="Question">Birthday:</p>
+                <div class="Answer">18.11.02</div>
+            </li>
+            <li>
+                <p class="Question">Language:</p>
+                <div class="Answer">Russian</div>
+            </li>
+            <li>
+                <p class="Question">Relationship:</p>
+                <div class="Answer">None</div>
+            </li>
+        </ul>
+        
+
+         
+
+        <div class="Icons">
+            <div>
+        <img src="FriendsP.svg">
+        <p>Friends
+            <span class="span">35</span>
+        </p>
+        </div>
+        <div>
+        <img src="MusicP.svg">
+        <p>Music
+            <span class="span">127</span>
+        </p>
+        </div>
+
+        <div>
+        <img src="PhotoP.svg">
+        <p>Photos
+            <span class="span">17</span>
+        </p>
+
+        </div>
+
+        <div>
+        <img src="VideoP.svg">
+        <p>Videos
+            <span class="span">35</span>
+        </p>
+
+        </div>
+        </div>
+
+    </div>
+    </div>
+
+        </div>
+        <div class="textarea"><img src="Ava.jpg"><p>What's news?</p>
+        <img src="Music.svg">
+        <img src="Photo.svg">
+        <img src="Video.svg">
+        </div>
+
+    </section>
+
+    
+
+    </main>
 </body>
 </html>

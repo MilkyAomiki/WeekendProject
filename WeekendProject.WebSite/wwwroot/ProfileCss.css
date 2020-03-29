@@ -4,7 +4,14 @@ body, h1, h2, h3, h4, h5, p, label, img, li, ul, a {
 }
 
 body {font-family: 'Pacifico', cursive;
-    font-family: 'Roboto', sans-serif;}
+    font-family: 'Roboto', sans-serif;
+    background: url(bg.png);}
+
+    main {width: 1220px;
+    height: 768px;
+    display: grid;
+    grid-template-columns: 300px 920px;
+    margin: 0 auto;}
 
 
 aside {
@@ -20,6 +27,7 @@ aside {
     background: #FAFAFA;}
 
 .ava {width: 50px;
+    box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);
 height: 50px;
 border-radius: 50%;
 margin-right: 10px;}
@@ -68,7 +76,7 @@ ul {list-style-type: none;}
 
 ul li:hover > p {color: #B60F46; }
 
-li {display: flex;
+aside li {display: flex;
 margin-bottom: 30px;}
 
 li a {
@@ -132,4 +140,196 @@ height: 18px;}
 height: 20px;
 margin-right: 10px;
 margin-left: 10px;}
+
+section#MyPage img.Avatar {height: 322px;
+width: 322px;
+border-radius: 50%;
+margin-top: 30px;
+margin-left: 30px;
+box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);}
+
+section#MyPage {width: 920px;
+height: 768px;
+background-color: white;}
+
+#MyPage h1 {width: 219px;
+    height: 42px;
+    margin-right: 141px;
+    margin-bottom: 25px;
+    font-family: Pacifico;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    
+    color: #B60F46;}
+
+#MyPage .online {
+    width: 110px;
+    height: 14px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+    
+    
+    color: #181818;}
+
+.status {
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+width: 472px;
+left: 683px;
+top: 96px;
+
+background: #FAFAFA;
+border-radius: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;}
+
+    #MyPage .Question {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    
+    color: #515151;}
+
+.dd3 {margin-left: 25px;
+padding-top: 10px;}
+
+.dd2 {width: 413px;
+height: 175px;
+margin-top: 20px;}
+
+#MyPage .dd2 ul {
+margin-left: 10px;
+margin-top: 5px;
+width: 206px;
+height: 100%;}
+
+#MyPage .dd2 ul li {display: flex;
+align-items: center;
+margin-bottom: 10px;
+width: 206px;}
+
+#MyPage .Answer {
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 89px;
+    background: #FAFAFA;
+border-radius: 10px;
+}
+
+#MyPage .dd2 ul li:first-child p {margin-right: 84px;}
+
+#MyPage .dd2 ul li:nth-child(2) p {margin-right: 47px;}
+
+#MyPage .dd2 ul li:nth-child(3) p {margin-right: 35px;}
+
+#MyPage .dd2 ul li:nth-child(4) p {margin-right: 15px;}
+
+.Info {display: flex;}
+
+.Info .Imya {
+    margin-top: 44px;
+    display: flex;
+    align-items: center;
+    width: 472px;
+    height: 35px;}
+
+.Info .dd .Imya .online {text-align: right;}
+
+.dd2 {display: flex;
+    flex-direction: row;
+align-items: center;}
+
+.Icons {display: grid;
+grid-template-columns: 43px 43px;
+grid-template-rows: 80px 80px;
+column-gap: 53px;
+margin-left: 66px;
+row-gap: 15px;}
+
+div.Icons p:first-child {
+    width: 43px;
+    height: 40px;
+    left: 965px;
+    top: 187px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    
+    color: #181818;}
+
+div.Icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.span {font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    
+    color: #B60F46;}
+
+.textarea {
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+    margin-left: 30px;
+    margin-top: 25px;
+    width: 805px;
+    height: 58px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);
+    border-radius: 15px;}
+
+.textarea img:first-child {width: 50px;
+    box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);
+height: 50px;
+border-radius: 50%;
+margin-right: 10px;}
+
+.textarea p {
+    margin-right: 450px;
+    margin-left: 30px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+      
+    color: #C4C4C4;}
+
+.textarea img:nth-child(3) {
+    margin-right: 25px;
+}
+
+.textarea img:nth-child(4) {
+    margin-right: 25px;
+}
+
+
 
