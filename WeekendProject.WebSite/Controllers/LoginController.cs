@@ -17,12 +17,23 @@ namespace Weekend.WebSite.Controllers
             this.user = user;
         }
 
-        [HttpPost]
+        [HttpPost("/Login/LogInConfirm")]
         public IActionResult LogInConfirm(UserLoginFormDTO user)
         {
             var confirmed = this.user.Authtorizatiion(user);
-            int statusCode = confirmed ? 200 : 204;
-            return StatusCode(statusCode);
+            if (confirmed)
+            {
+
+                return Redirect("/User/" + user.Login);
+            }
+            
+            return NotFound();
+        }
+
+        [HttpGet("/")]
+        public void FirstOpen()
+        {
+            Response.Redirect("/Login");
         }
 
         [HttpPost]
@@ -34,7 +45,7 @@ namespace Weekend.WebSite.Controllers
             Response.Redirect("/");
         }
 
-        [HttpGet("/")]
+        [HttpGet("/Login")]
         public IActionResult LogIn()
         {
             return View();

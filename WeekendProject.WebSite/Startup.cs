@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Weekend.BLL.Interfaces;
 using Weekend.BLL.Services;
 using Weekend.BLL.DI;
+using System.IO;
 
 namespace Weekend.WebSite
 {
@@ -26,7 +27,7 @@ namespace Weekend.WebSite
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHostEnvironment host )
         {
             if (env.IsDevelopment())
             {
@@ -34,8 +35,9 @@ namespace Weekend.WebSite
             }
             app.UseStaticFiles();
             app.UseRouting();
-
-            app.UseMvc(route => { route.MapRoute("login", "{controller=Login}/{action=LogIn}/{id?}"); route.MapRoute("registration", "{controller=Login}/{action=SignUp}/{id}"); });  
+            app.UseAuthorization();
+            app.UseAuthentication();
+            app.UseMvc(route => { route.MapRoute("login", "{controller=Login}/{action=LogIn}/{id?}");  route.ApplicationBuilder.UseAuthentication();  });
         }
     }
 }
