@@ -7,14 +7,9 @@ namespace Weekend.BLL.DI
 {
     public class DIModule
     {
-        readonly WeekendContext context;
-        public DIModule()
+        public WeekendContext ConfigureContext(string connection)
         {
-             context = new WeekendContext();
-        }
-
-        public WeekendContext ConfigureContext()
-        {
+            var context = new WeekendContext(connection);
             return context;
         }
     }
