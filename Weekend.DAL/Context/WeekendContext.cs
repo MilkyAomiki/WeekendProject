@@ -1,7 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using System.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
 using Weekend.DAL.Models;
 
 namespace Weekend.DAL.Context

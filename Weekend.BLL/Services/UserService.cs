@@ -1,11 +1,9 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Collections.Generic;
-using System.Text;
 using Weekend.BLL.DTO;
+using Weekend.BLL.Interfaces;
 using Weekend.DAL.Context;
 using Weekend.DAL.Models;
-using Weekend.BLL.Interfaces;
 
 namespace Weekend.BLL.Services
 {
