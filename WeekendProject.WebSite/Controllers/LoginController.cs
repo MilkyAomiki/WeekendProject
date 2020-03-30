@@ -26,8 +26,8 @@ namespace Weekend.WebSite.Controllers
 
                 return Redirect("/User/" + user.Login);
             }
-            
-            return NotFound();
+
+            return View("/Views/Login/LogIn");
         }
 
         [HttpGet("/")]
@@ -37,12 +37,17 @@ namespace Weekend.WebSite.Controllers
         }
 
         [HttpPost]
-        public void SignUpConfirm(string Email, string fName, string lName, DateTime date, string password)
+        public IActionResult SignUpConfirm(string Email, string fName, string lName, DateTime date, string password)
         {
             UserLoginFormDTO userLogin = new UserLoginFormDTO { Login = Email, Password = password };
             UserDTO user = new UserDTO { Login = Email, Birthday = date, FirstName = fName, LastName = lName };
-            this.user.Registration(userLogin, user);
-            Response.Redirect("/");
+
+
+            if (this.user.Registration(userLogin, user))
+            {
+                return Redirect("/");
+            }
+            return View("/Views/Login/SignUp");
         }
 
         [HttpGet("/Login")]

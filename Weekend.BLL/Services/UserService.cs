@@ -46,7 +46,7 @@ namespace Weekend.BLL.Services
             context.SaveChanges();
             User user1 = new User { Login = user.Login, Birthday = user.Birthday, FirstName = user.FirstName, LastName = user.LastName };
             context.User.Add(user1);
-            context.SaveChangesAsync();
+            context.SaveChanges();
             return true;
 
         }
