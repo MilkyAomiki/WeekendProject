@@ -20,6 +20,18 @@ namespace Weekend.BLL.Services
         public bool Authtorizatiion(UserLoginFormDTO userLoginForm)
         {
             bool isExist;
+            List<User> users = context.User.ToList();
+            //If userloginform > user
+            //List<UserLoginForm> distinc = new List<UserLoginForm>();
+            //foreach (var item in context.UserLoginForm)
+            //{
+            //    if (users.Where(p=>p.Login == item.Login).Count() == 0)
+            //    {
+            //        distinc.Add(item);
+            //    }
+            //}
+            //context.UserLoginForm.RemoveRange(distinc);
+            //context.SaveChanges();
             var user = context.UserLoginForm.Where(p => p.Login == userLoginForm.Login && p.Password == userLoginForm.Password).FirstOrDefault();
             if (user != null)
             {
