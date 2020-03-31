@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Npgsql;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using Weekend.BLL.DTO;
 using Weekend.BLL.Interfaces;
@@ -42,7 +45,23 @@ namespace Weekend.BLL.Services
 
             UserLoginForm newUser = new UserLoginForm { Login = userLoginForm.Login, Password = userLoginForm.Password };
             context.UserLoginForm.Add(newUser);
-            context.SaveChanges();
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                if (e.InnerException.GetType() == typeof(PostgresException))
+                {
+                    var ep = (PostgresException)e.InnerException;
+                    if (ep.Code == "23505")
+                    {
+                        throw new ValidationException("Login is already taken");
+                    }
+                }
+                ;
+            }
+         
             User user1 = new User { Login = user.Login, Birthday = user.Birthday, FirstName = user.FirstName, LastName = user.LastName };
             context.User.Add(user1);
             context.SaveChanges();
