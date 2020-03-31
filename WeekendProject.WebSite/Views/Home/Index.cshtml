@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="~/ProfileCss.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,500&display=swap" 
     rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
     <main>
@@ -23,12 +24,12 @@
     <img src="~/Ava.jpg" class="ava">
 
     <div class="dd"> 
-        <p class="name">@($"{Model.FirstName} {Model.LastName}")</p>
+        <a href="#" class="name">@($"{Model.FirstName} {Model.LastName}")</a>
     <p class="Myprofile">My profile</p>
     </div>
 
-    <a href="#"><img src="~/Settings.svg"></a>
-    <a href="/Login/LogOut"><img src="~/Logout.svg"></a>
+    <a href="#"><img src="~/Settings.svg" class="Settings"></a>
+    <a href="/Login/LogOut"><img src="~/Logout.svg" class="Logout"></a>
     </div>
 
     <ul>
@@ -57,12 +58,25 @@
 
     <section id="MyPage">
         <div class="Info">
-        <img src="~/Ava.jpg" class="Avatar">
+
+        <div class="ButtonAva">
+
+            <a href="#">
+            <div class="left-circle"><img src="~/Message.svg"></div>
+            </a>
+
+            <img src="~/Ava.jpg" class="Avatar">
+
+            <a href="#">
+            <div class="right-circle"><img src="~/Friends.svg"></div>
+            </a>
+        </div>
+        
 
         <div class="dd3">
         <div class="Imya">
         <h1>@($"{Model.FirstName} {Model.LastName}")</h1>
-        <p class="online">Last seen 1 hour ago</p>
+        <p class="online">Online</p>
         </div>
 
         <div class="status"><p>Dead inside</p></div>
@@ -92,34 +106,42 @@
          
 
         <div class="Icons">
+
+        <a href="#">
             <div>
         <img src="~/FriendsP.svg">
         <p>Friends
             <span class="span">35</span>
         </p>
         </div>
+        </a>
+
+        <a href="#">
         <div>
         <img src="~/MusicP.svg">
         <p>Music
             <span class="span">127</span>
         </p>
         </div>
+        </a>
 
+        <a href="#">
         <div>
         <img src="~/PhotoP.svg">
         <p>Photos
             <span class="span">17</span>
         </p>
-
         </div>
+        </a>
 
+        <a href="#">
         <div>
         <img src="~/VideoP.svg">
         <p>Videos
             <span class="span">35</span>
         </p>
-
         </div>
+        </a>
         </div>
 
     </div>
