@@ -13,148 +13,222 @@ body {font-family: 'Pacifico', cursive;
     grid-template-columns: 300px 920px;
     margin: 0 auto;}
 
+/* Начало aside */
 
-aside {
+aside { 
+    z-index: 5;
     width: 300px;
     height: 100vh;
-    left: 0px;
-    top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #FAFAFA;}
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);}
 
-.ava {width: 50px;
-box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);
-height: 50px;
-border-radius: 50%;
-margin-right: 10px;}
+    .ava {width: 50px;
+        box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;}
 
-.name {font-family: Roboto;
-    width: 110px;
-    height: 21px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    /* identical to box height */}
+    ul li:hover > .AsideImg {transform: rotate(360deg);
+        transition: 0.5s ease;}
 
-#Profile {
-width: 245px;
-height: 50px;
-display: flex;
-flex-direction: row;
-align-items: center;
+        ul li .AsideImg {transition: 0.5s ease;}
+
+        aside li {display: flex;
+        margin-bottom: 30px;}
+
+        aside div.audio {
+            width: 281px;
+            height: 57px;
+            margin-top: 35px;
+            border-top: 1px solid #D592FF;
+            border-bottom: 1px solid #D592FF;
+            display: flex;
+            flex-direction: row;
+            align-items: center;    
+        }
+        #Profile:hover > .dd > .name {color: #B60F46;
+            transition: 0.2s ease;
+        }
+            
+            .dd {display: flex;
+            flex-direction: column;
+            width: 100px;
+            height: 35px;
+            margin-right: 20px;}
+
+            #Profile a:nth-child(3):hover > .Settings {
+                transform: rotate(360deg);
+                transition: 0.5s ease;
+        }
+        
+        #Profile a:nth-child(4):hover > .Logout {
+                transform: rotate(360deg);
+                transform: scale(1.2);
+                transition: 0.5s ease;
+        }
+        
+        .Logout, .Settings {transition: 0.5s ease;}
+
+        #Profile {
+            width: 245px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            transition: 0.2s ease;}
+
+
+            #Profile a:nth-child(3) {margin-right: 20px;}
+
+            .Myprofile {font-family: Roboto;
+                width: 60px;
+            height: 14px;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 14px;
+                /* identical to box height */
+                color: #444444;}
+
+                .name {font-family: Roboto;
+                    width: 110px;
+                    text-decoration: none;
+                    color: black;
+                    height: 21px;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 21px;
+                    /* identical to box height */}
+                
+                .Logo {margin-top: 30px;}
+                
+                ul {list-style-type: none;}
+                
+                ul li:hover > a {color: #B60F46;}
+                
+                li a {
+                    color: black;
+                    text-decoration: none;
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 20px;
+                    line-height: 23px;}
+                
+                ul li img {margin-right: 11px;}
+
+                .audio .Cover {width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    margin-right: 13px;
+                    margin-left: 15px;
+                    }
+
+                    .Artist {width: 44px;
+                        height: 12px;
+                        
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 12px;
+                        line-height: 14px;
+                        
+                        color: #181818;}
+
+                        .NameOfMusic {margin-right: 40px;}
+
+                        .SoundName {width: 79px;
+                            height: 14px;
+                            
+                            font-family: Roboto;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 14px;
+                            /* identical to box height */
+                            
+                            color: #181818;}
+                        
+                        .Arrow-left, .Arrow-right {width: 18px;
+                        height: 18px;}
+                        
+                        .Pause {width: 15px;
+                        height: 20px;
+                        margin-right: 10px;
+                        margin-left: 10px;}
+
+        /* Конец aside */
+
+section#MyPage img.Avatar {
+position: absolute;
 margin-top: 50px;
-margin-bottom: 50px;
-transition: 0.2s ease;}
+margin-left: 50px;
+z-index: 3;
+height: 280px;
+width: 280px;
+border-radius: 50%;}
 
-.Logo {margin-top: 30px;}
-
-#Profile:hover > .dd > .name {color: #B60F46;
-transition: 0.2s ease;}
-
-.dd {display: flex;
-flex-direction: column;
-width: 100px;
-height: 35px;
-margin-right: 20px;}
-
-#Profile a:nth-child(3) {margin-right: 20px;}
-
-.Myprofile {font-family: Roboto;
-    width: 60px;
-height: 14px;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 14px;
-    /* identical to box height */
-    color: #444444;}
-
-ul {list-style-type: none;}
-
-ul li:hover > a {color: #B60F46; }
-
-aside li {display: flex;
-margin-bottom: 30px;}
-
-li a {
-    color: black;
-    text-decoration: none;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 23px;}
-
-ul li img {margin-right: 11px;}
-
-aside div.audio {
-    width: 281px;
-    height: 57px;
-    margin-top: 35px;
-    background: #F4F4F4;
-    border-radius: 15px;
+.left-circle {
+    position: absolute;
     display: flex;
-    flex-direction: row;
-    align-items: center;    
+    align-items: center;
+    z-index: 2;
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 165px;  /* ширина в два раза меньше высоты, иначе получится полуовал */
+    height: 330px;
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    background: #FAFAFA;
+box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);
 }
 
-.audio .Cover {width: 50px;
-height: 50px;
-border-radius: 50%;
-margin-right: 13px;
-margin-left: 15px;
+.left-circle > img {margin-left: 3px;}
+
+.right-circle > img {margin-left: 142px;}
+
+.right-circle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    width: 165px;  /* ширина в два раза меньше высоты, иначе получится полуовал */
+    height: 330px;
+    margin-top: 25px;
+    margin-left: 190px;
+    border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);
 }
 
-.NameOfMusic {margin-right: 40px;}
+.left-circle:hover {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
 
-.Artist {width: 44px;
-    height: 12px;
-    
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 14px;
-    
-    color: #181818;}
+.right-circle:hover {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
 
-.SoundName {width: 79px;
-    height: 14px;
-    
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    /* identical to box height */
-    
-    color: #181818;}
-
-.Arrow-left, .Arrow-right {width: 18px;
-height: 18px;}
-
-.Pause {width: 15px;
-height: 20px;
-margin-right: 10px;
-margin-left: 10px;}
-
-section#MyPage img.Avatar {height: 322px;
-width: 322px;
-border-radius: 50%;
-margin-top: 30px;
-margin-left: 30px;
-box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);}
-
-section#MyPage {width: 920px;
+section#MyPage {
+width: 920px;
 height: 768px;
 background-color: white;}
 
-#MyPage h1 {width: 219px;
+.ButtonAva {
+    margin-right: 25px;
+    margin-bottom: 25px;
+width: 330px;
+height: 330px;}
+
+
+#MyPage h1 {
+    width: 430px;
     height: 42px;
-    margin-right: 141px;
     margin-bottom: 25px;
     font-family: Pacifico;
     font-style: normal;
@@ -164,8 +238,10 @@ background-color: white;}
     
     color: #B60F46;}
 
+div.Imya .online {
+float: right;}
+
 #MyPage .online {
-    width: 110px;
     height: 14px;
     
     font-family: Roboto;
@@ -242,13 +318,15 @@ border-radius: 10px;
 .Info {display: flex;}
 
 .Info .Imya {
+    width: 482px;
     margin-top: 44px;
     display: flex;
     align-items: center;
     width: 472px;
     height: 35px;}
 
-.Info .dd .Imya .online {text-align: right;}
+.Info .dd .Imya .online {
+    text-align: right;}
 
 .dd2 {display: flex;
     flex-direction: row;
@@ -264,8 +342,6 @@ row-gap: 15px;}
 div.Icons p:first-child {
     width: 43px;
     height: 40px;
-    left: 965px;
-    top: 187px;
     
     font-family: Roboto;
     font-style: normal;
@@ -276,12 +352,18 @@ div.Icons p:first-child {
     
     color: #181818;}
 
+.Icons div:first-child:hover > img {transform: scale(1.1);
+transition: 0.2s ease;}
+
 div.Icons div {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
+
+.Icons a {text-decoration: none;
+color: #444444}
 
 .span {font-family: Roboto;
     font-style: normal;
