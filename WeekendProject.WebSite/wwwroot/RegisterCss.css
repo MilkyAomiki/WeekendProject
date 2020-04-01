@@ -19,7 +19,10 @@ div {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;}
 
-.fName, .lName, .Birthday {margin-bottom: 20px;}
+fieldset input:nth-child(2), input:nth-child(3), input:nth-child(4),
+input:nth-child(5) {margin-bottom: 20px;}
+
+fieldset input:nth-child(6) {margin-bottom: 30px;}
 
 input {
     width: 251px;
@@ -33,9 +36,6 @@ input {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;}
-
-.email {margin-bottom: 20px;}
-.password {margin-bottom: 30px;}
 
 img {margin: 30px auto;}
 
