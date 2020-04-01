@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="/LoginCss.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap" rel="stylesheet">
 
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.10/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     <link rel="icon" type="image/x-icon" href="~/favicon.ico">
 </head>
 <body>
@@ -21,9 +23,9 @@
         <form action="/Login/LogInConfirm" method="post">
             <fieldset>
             <img src="/Logo.svg">
-                <input type="email" name="Login" placeholder="E-mail">
+                <input type="email" name="Login" required placeholder="E-mail">
 
-                <input type="password" name="Password" placeholder="Password">
+                <input type="password" name="Password" required placeholder="Password">
 
             <button type="submit">Sign in</button>
             <a href="/SignUp"><p>Not registered yet?</p></a>
