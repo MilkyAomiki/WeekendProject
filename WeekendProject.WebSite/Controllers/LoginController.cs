@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Weekend.BLL.Interfaces;
-using Weekend.BLL.DTO;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using System.ComponentModel.DataAnnotations;
-using Weekend.WebSite.Models;
+using Weekend.BLL.DTO;
+using Weekend.BLL.Interfaces;
 
 namespace Weekend.WebSite.Controllers
 {
-    public class LoginController: Controller
+    public class LoginController : Controller
     {
         private readonly IUser user;
 
-        public LoginController(IUser user) 
+        public LoginController(IUser user)
         {
             this.user = user;
         }
@@ -22,7 +19,7 @@ namespace Weekend.WebSite.Controllers
         [HttpPost("/Login/LogInConfirm")]
         public IActionResult LogInConfirm(UserLoginFormDTO user)
         {
-            
+
             var confirmed = this.user.Authtorizatiion(user);
             if (confirmed)
             {
@@ -30,7 +27,7 @@ namespace Weekend.WebSite.Controllers
                 return Redirect("/User/" + user.Login);
             }
 
-            return View("/Login");
+            return View("/Views/Login/LogIn.cshtml");
         }
 
         [HttpGet("/")]
@@ -41,10 +38,10 @@ namespace Weekend.WebSite.Controllers
 
         [HttpPost]
         public IActionResult SignUpConfirm(UserLoginFormDTO userLoginForm, UserDTO user)
-        { 
+        {
             if (!ModelState.IsValid)
             {
-                return this.RedirectToAction("SignUp", new SignupForm {UserLoginForm = userLoginForm, User = user});
+                return this.RedirectToAction("SignUp", user);
             }
 
             try
@@ -57,10 +54,10 @@ namespace Weekend.WebSite.Controllers
             catch (ValidationException e)
             {
                 ModelState.AddModelError("", e.Message);
-                return this.RedirectToAction("SignUp", new SignupForm { UserLoginForm = userLoginForm, User = user });
+                return View("~/Views/Login/SignUp.cshtml", user);
             }
 
-            return this.RedirectToAction("SignUp");
+            return RedirectToAction("SignUp");
         }
 
         [HttpGet("/Login")]
@@ -70,18 +67,11 @@ namespace Weekend.WebSite.Controllers
         }
 
         [HttpGet("/SignUp")]
-        public IActionResult SignUp(SignupForm form = null)
-        {
-            if (form == null)
-            {
-                return View();
+        public IActionResult SignUp(UserDTO user)
+        {            
+            return View(user);
 
-            }
-            else
-            {
-                return View(form);
-            }
-            
+
         }
 
         public IActionResult LogOut()

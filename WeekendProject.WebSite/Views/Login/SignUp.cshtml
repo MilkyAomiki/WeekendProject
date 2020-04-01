@@ -1,5 +1,7 @@
 ﻿@using Weekend.WebSite.Models
-@model SignupForm
+@using Weekend.BLL.DTO
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model UserDTO
 @{
     ViewData["Title"] = "SignUp";
 }
@@ -11,30 +13,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekend | Sign Up</title>
     <link rel="stylesheet" href="~/RegisterCss.css">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap" 
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap"
+          rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="~/favicon.ico">
+
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 </head>
 <body>
-    <div>
-        <form action="/Login/SignUpConfirm" method="post">
+    <div id="divForm">
+        <form class="form-group" action="/Login/SignUpConfirm" method="post">
             <fieldset>
-            <img src="Logo.svg">
-                <input type="email" name="Login" required placeholder="E-mail" tabindex="1"> 
+                <img src="~/Logo.svg">
+                <div asp-validation-summary="ModelOnly"></div>
+                <input type="email" name="Login" required placeholder="E-mail" tabindex="1" />
+                <span asp-validation-for="@Model.Login" class="text-danger"></span>
 
-                <input type="text" name="FirstName" required placeholder="First name" tabindex="2">
+                <input type="text" name="FirstName" required placeholder="First name" tabindex="2" />
 
-                <input type="text" name="LastName" required placeholder="Last name" tabindex="3">
+                <input type="text" name="LastName" required placeholder="Last name" tabindex="3" />
 
-                <input type="date" name="Birthday" required placeholder="Birthday" tabindex="4">
+                <input type="date" name="Birthday" required placeholder="Birthday" tabindex="4" />
 
-                <input type="password" name="password" required placeholder="Password" tabindex="5">
+                <input type="password" name="password" required placeholder="Password" tabindex="5" />
 
-            <button type="submit">Sign up</button>
-            <a href="/"><p>Already signed up?</p></a>
+                <button type="submit">Sign up</button>
+                <a href="/"><p>Already signed up?</p></a>
             </fieldset>
         </form>
     </div>

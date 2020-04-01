@@ -11,13 +11,13 @@ fieldset {border: none;
     align-items: center;
 text-align: center;}
 
-div {
+#divForm {
     margin: 200px auto;
     width: 331px;
     height: 564px;
-    
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;}
+    border-radius: 15px;
+}
 
 fieldset input:nth-child(2), input:nth-child(3), input:nth-child(4),
 input:nth-child(5) {margin-bottom: 20px;}
