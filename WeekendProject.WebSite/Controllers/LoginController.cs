@@ -26,8 +26,13 @@ namespace Weekend.WebSite.Controllers
 
                 return Redirect("/User/" + user.Login);
             }
+            else
+            {
+                ModelState.AddModelError("", "User with given login and password is not found");
+                return View("/Views/Login/LogIn.cshtml", user);
+            }
 
-            return View("/Views/Login/LogIn.cshtml");
+            
         }
 
         [HttpGet("/")]

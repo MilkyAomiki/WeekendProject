@@ -11,13 +11,13 @@ fieldset {border: none;
     align-items: center;
 text-align: center;}
 
-div {
+#formDiv {
     margin: 200px auto;
     width: 331px;
     height: 372px;
-    
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;}
+    border-radius: 15px;
+}
 
 input {
     width: 251px;

@@ -1,4 +1,5 @@
 ﻿@using Weekend.BLL.DTO
+@addTagHelper*,Microsoft.AspNetCore.Mvc.TagHelpers
 @model UserLoginFormDTO
 @{
     ViewData["Title"] = "Login";
@@ -20,20 +21,21 @@
     <link rel="icon" type="image/x-icon" href="~/favicon.ico">
 </head>
 <body>
-    <div>
+    <div id="formDiv">
         <form action="/Login/LogInConfirm" method="post">
             <fieldset>
-            <img src="/Logo.svg">
+                <img src="/Logo.svg">
+                <div asp-validation-summary="ModelOnly"></div>
                 <input type="email" name="Login" required placeholder="E-mail">
 
                 <input type="password" name="Password" required placeholder="Password">
 
-            <button type="submit">Sign in</button>
-            <a href="/SignUp"><p>Not registered yet?</p></a>
+                <button type="submit">Sign in</button>
+                <a href="/SignUp"><p>Not registered yet?</p></a>
             </fieldset>
         </form>
     </div>
-    
+
 </body>
 </html>
 
