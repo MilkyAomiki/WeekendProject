@@ -1,5 +1,7 @@
 body, label, p, h1, a {margin: 0;}
 
+input:focus {border-color: #777777;}
+
 body {background: url(bg.jpg) no-repeat;
 background-size: cover;
 font-family: 'Pacifico', cursive;
@@ -44,9 +46,7 @@ input {
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
     border-radius: 15px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;}
+    outline: none;}
 
 img {margin: 30px auto;}
 
@@ -56,22 +56,15 @@ button {
     border: none;
     margin: 18px auto;
     font-family: Pacifico;
-font-style: normal;
-font-weight: normal;
 font-size: 18px;
 line-height: 32px;
 color: #FFFFFF;
 background: #B60F46;
-border-radius: 15px;}
+border-radius: 15px;
+outline: none;}
 
 
 a {
-  font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     line-height: 14px;
-    /* identical to box height */
-    
-    
     color: #3D3AD4;}
