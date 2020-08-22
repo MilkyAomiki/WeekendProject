@@ -5,9 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\bg.jpg" />
-    <None Include="wwwroot\LoginCss.css" />
-    <None Include="wwwroot\Logo.svg" />
+    <None Include="wwwroot\pics\bg.jpg" />
+    <None Include="wwwroot\css\LoginCss.css" />
+    <None Include="wwwroot\pics\Logo.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,7 +15,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
   </ItemGroup>
 
   <ItemGroup>

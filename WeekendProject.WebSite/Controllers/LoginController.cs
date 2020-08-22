@@ -1,17 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using System.ComponentModel.DataAnnotations;
 using Weekend.BLL.DTO;
 using Weekend.BLL.Interfaces;
 
 namespace Weekend.WebSite.Controllers
 {
-    public class LoginController : Controller
+    public class LogInController : Controller
     {
         private readonly IUser user;
 
-        public LoginController(IUser user)
+        public LogInController(IUser user)
         {
             this.user = user;
         }
@@ -23,7 +20,6 @@ namespace Weekend.WebSite.Controllers
             var confirmed = this.user.Authtorizatiion(user);
             if (confirmed)
             {
-
                 return Redirect("/User/" + user.Login);
             }
             else
@@ -41,42 +37,10 @@ namespace Weekend.WebSite.Controllers
             Response.Redirect("/Login");
         }
 
-        [HttpPost]
-        public IActionResult SignUpConfirm(UserLoginFormDTO userLoginForm, UserDTO user)
-        {
-            if (!ModelState.IsValid)
-            {
-                return this.RedirectToAction("SignUp", user);
-            }
-
-            try
-            {
-                if (this.user.Registration(userLoginForm, user))
-                {
-                    return Redirect("/");
-                }
-            }
-            catch (ValidationException e)
-            {
-                ModelState.AddModelError("", e.Message);
-                return View("~/Views/Login/SignUp.cshtml", user);
-            }
-
-            return RedirectToAction("SignUp");
-        }
-
         [HttpGet("/Login")]
         public IActionResult LogIn()
         {
             return View();
-        }
-
-        [HttpGet("/SignUp")]
-        public IActionResult SignUp(UserDTO user)
-        {            
-            return View(user);
-
-
         }
 
         public IActionResult LogOut()

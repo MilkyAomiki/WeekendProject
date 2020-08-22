@@ -18,6 +18,7 @@ namespace Weekend.BLL.Services
         {
             this.context = context;
         }
+
         public bool Authtorizatiion(UserLoginFormDTO userLoginForm)
         {
             bool isExist;

@@ -11,20 +11,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekend | Login</title>
-    <link rel="stylesheet" href="/LoginCss.css">
+    <link rel="stylesheet" href="/css/LoginCss.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap" rel="stylesheet">
 
 
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
-    <link rel="icon" type="image/x-icon" href="~/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="~/pics/favicon.ico">
 </head>
 <body>
     <div id="formDiv">
         <form action="/Login/LogInConfirm" method="post">
             <fieldset>
-                <img src="/Logo.svg">
+                <img src="/pics/Logo.svg">
                 <div asp-validation-summary="ModelOnly"></div>
                 <input type="email" name="Login" required placeholder="E-mail">
 
