@@ -1,0 +1,509 @@
+body, h1, h2, h3, h4, h5, p, label, img, li, ul, a {
+    margin: 0;
+    padding: 0;
+}
+
+a 
+{
+    text-decoration: none;
+    color: #B60F46;
+}
+
+body {font-family: Roboto;
+background: url(bg.png);
+overflow: hidden;}
+
+main {
+display: grid;
+width: 1220px;
+height: 768px;
+grid-template-columns: 600px 1fr;
+margin: 0 auto;}
+
+/* Начало aside */
+
+aside 
+{
+position: fixed;
+width: 300px;
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+background: #FFF;
+box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);
+}
+
+.ava 
+{
+width: 50px;
+box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);
+height: 50px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+ul li:hover > .AsideImg 
+{
+transform: rotate(360deg);
+transition: 0.5s ease;
+}
+
+ul li .AsideImg {transition: 0.5s ease;}
+
+aside li 
+{
+display: flex;
+margin-bottom: 30px;
+}
+
+aside div.audio 
+{
+width: 281px;
+height: 57px;
+margin-top: 35px;
+border-top: 1px solid #D592FF;
+border-bottom: 1px solid #D592FF;
+display: flex;
+flex-direction: row;
+align-items: center;    
+}
+        
+#Profile:hover > .dd > .name 
+{
+color: #B60F46;
+transition: 0.2s ease;
+}
+            
+.dd
+{
+display: flex;
+flex-direction: column;
+width: 100px;
+height: 35px;
+margin-right: 20px;
+}
+
+#Profile a:nth-child(3):hover > .Settings {
+transform: rotate(360deg);
+transition: 0.5s ease;
+}
+        
+#Profile a:nth-child(4):hover > .Logout 
+{
+transform: rotate(360deg);
+transform: scale(1.2);
+transition: 0.5s ease;
+}
+        
+.Logout, .Settings {transition: 0.5s ease;}
+
+#Profile 
+{
+width: 245px;
+height: 50px;
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-top: 50px;
+margin-bottom: 50px;
+transition: 0.2s ease;
+}
+
+#Profile a:nth-child(3) {margin-right: 20px;}
+
+.Myprofile 
+{
+width: 60px;
+height: 14px;
+font-weight: 300;
+font-size: 12px;
+line-height: 14px;
+color: #444444;
+}
+
+.name 
+{
+width: 110px;
+text-decoration: none;
+color: black;
+height: 21px;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+}
+                
+.Logo {margin-top: 30px;}
+                
+ul {list-style-type: none;}
+                
+ul li:hover > a {color: #B60F46;}
+                
+li a 
+{
+color: black;
+text-decoration: none;
+font-size: 20px;
+line-height: 23px;
+}
+                
+ul li img {margin-right: 11px;}
+
+.audio .Cover 
+{
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-right: 13px;
+margin-left: 15px;
+}
+
+.Artist 
+{
+width: 44px;
+height: 12px;
+font-weight: 300;
+font-size: 12px;
+line-height: 14px;                     
+color: #181818;
+}
+
+.NameOfMusic {margin-right: 40px;}
+
+.SoundName 
+{
+width: 79px;
+height: 14px;
+font-weight: 500;
+font-size: 12px;
+line-height: 14px;        
+color: #181818;}
+                        
+.Arrow-left, .Arrow-right 
+{width: 18px;
+height: 18px;}
+                        
+.Pause {
+width: 15px;
+height: 20px;
+margin-right: 10px;
+margin-left: 10px;
+}
+
+/* Конец aside */
+
+#Messages {
+display: flex;
+align-items: center;
+flex-direction: column;
+width: 300px;
+height: 100vh;
+overflow: hidden;
+margin-left: 300px;
+background-color: white;
+transition: 0.5s ease;
+}
+
+#Messages:hover {overflow: scroll;}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e6e6e6;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {background-color: #c4c4c4;}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+#Messages h2 {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;}
+
+#Messages div:nth-child(2) {
+    width: 269px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #B60F46;
+    border-bottom: 1px solid #B60F46;
+}
+
+#Messages .UserMessage1 {
+    width: 269px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+
+
+#Messages div:nth-child(2) {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;}
+
+#Messages .Nick {
+    width: 184px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    color: #444444;}
+
+#Messages .Nick span {
+    width: 100%;
+    margin-top: 2px;
+    height: 18px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    font-weight: normal;}
+
+    #Messages img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+        box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);
+    }
+
+
+.TimeOfMessage { 
+    display: flex;
+    justify-content: flex-end;
+    width: 25px;
+    height: 12px;
+    padding-bottom: 25px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 12px;
+    color: #444444;}
+
+.Chat {
+    background-color: white;
+    position: fixed;
+    margin-left: 600px;
+    height: 100vh;
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);
+    overflow: scroll;}
+
+ .Send {width: 585px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    position: absolute;
+    bottom: 0;
+    user-select: none;
+    }
+
+.sendMessage 
+{
+    border: none;
+    outline: none;
+    color: #444;
+    font-weight: 300;
+    font-size: 15px;
+    width: 300px;
+    height: 29px;
+    margin-left: 40px;
+    resize: none;
+    padding-top: 9px;
+}
+
+.buttonSendMessage 
+{
+    border: none;
+    outline: none;
+    background-color: #B60F46;
+    width: 65px;
+    height: 40px;
+    border-collapse: collapse;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.alert 
+{
+    /* background-color: #e6e6e6; */
+    padding: 10px 15px;
+    border-radius: 15px;
+    word-wrap: break-word;
+    color: #444444;
+    /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); */
+    margin-bottom: 5px;
+    margin-left: 15px;
+    table-layout: fixed;
+}
+
+.textAlert 
+{
+    max-width: 550px;
+}
+
+.messageAvatar 
+{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    float: left;
+}
+
+.iconAttachMusic, .iconAttachPhoto
+{
+    margin-right: 15px;
+}
+
+.ChatMessage {
+    padding: 15px;
+font-size: 13px;
+line-height: 15px;
+    background: #FFFFFF;
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+}
+
+.sectionMessages 
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 71px 1fr 70px;
+    box-shadow: 0px 0px 4px rgba(138, 138, 138, 0.25);
+}
+
+.formAlertMessage 
+{
+    width: 100%;
+    height: 100%;
+    background: #fff;;
+}
+
+
+/* grid */
+html, body, .wrap {height: 100%;}
+.wrap {max-width: 1024px; margin: 0 auto 20px; padding: 50px 10px;}
+.wrap > div {margin-bottom: 30px;}
+	.wrap > div .container + .container {margin-left: 50px;}
+
+.clearfix:before, .clearfix:after {display:table; content:''}
+.clearfix:after {clear:both}
+.flex-middle {display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center;}
+
+/* content */
+.container {float: left; background: #fff;}
+.container-title 
+{
+    height: 85px; 
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-footer {height: 58px;}
+
+.viewport-wrapper {height: 99%; position: relative; overflow-y: hidden; overflow-x: hidden; }
+.viewport {width: 100%; overflow-y: hidden; overflow-x: hidden; position: absolute; left: 0; top: 7px; bottom: 7px; display: flex; flex-direction: column-reverse;}
+.content {position: absolute; left: 0; right: 0;}
+.content-scroll {right: -17px;}
+.content-list {padding: 0 20px 0 17px; -webkit-user-select: none; user-select: none;}
+    .content-list li + li {margin-top: 10px;}
+    
+.viewport-wrapper:hover {overflow-y: scroll;}
+.viewport:hover {overflow-y: scroll;}
+
+/* scroll bar */
+.scrollbar, .scroller {width: 4px; position: absolute; top: 0;}
+.scrollbar {right: 0; bottom: 0;}
+.scroller {left: 0; border-radius: 2px; background: #ccc; cursor: pointer;}
+
+/* Hacks */
+_:-ms-input-placeholder, :root .content-list {padding-left: 20px;}
+
+nav div.Circle:first-child, div.Circle:nth-child(2)
+{
+    margin-bottom: 4px;
+}
+
+nav, .searchMessage 
+{
+    margin-left: 50px;
+}
+
+nav:hover > .Circle 
+{
+    background-color: #B60F46;
+}
+
+.Circle 
+{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #444;
+}
+
+.Interlocutor 
+{
+    display: flex;
+    align-items: center;
+    width: 553px;
+    border-bottom: 1px solid #e6e6e6;
+    border-bottom-width: 100%;
+    padding-bottom: 5px;
+}
+
+.avaNameOnline 
+{
+    width: 350px;
+    margin-right: 60px;
+}
+
+.avaNameOnline img
+{
+    float: left;
+    margin-right: 25px;
+}
+
+.avaNameOnline .nameInterlocutor
+{
+    font-size: 24px;
+}
+
+.avaNameOnline .nameInterlocutor, .onlineInterlocutor
+{
+    font-weight: lighter;
+    color: #444;
+}
+
+.avaNameOnline .onlineInterlocutor
+{
+    font-size: 12px;
+}
+
