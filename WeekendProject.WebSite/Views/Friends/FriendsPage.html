@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FriendsCss.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <aside>
+            <img src="logo.svg" class="Logo">
+
+            <div id="Profile">
+                <img src="Ava.jpg" class="ava">
+
+                <div class="dd">
+                    <a href="C:\Users\Кирилл\Desktop\Учёба\Weekend\Profile\Profile.html" class="name">Kirill Sabaev</a>
+                    <p class="Myprofile">My profile</p>
+                </div>
+
+                <a href="#"><img src="Settings.svg" class="Settings"></a>
+                <a href="/Login/LogOut"><img src="Logout.svg" class="Logout"></a>
+            </div>
+
+            <ul>
+                <li><img src="News.svg" alt="" class="AsideImg"><a href="#">News</a></li>
+                <li><img src="Message.svg" class="AsideImg"><a href="C:\Users\Кирилл\Desktop\Учёба\Weekend\Messages\MessagesPage.html">Messages</a></li>
+                <li><img src="Friends.svg" class="AsideImg"><a href="#">Friends</a></li>
+                <li><img src="Communities.svg" class="AsideImg"><a href="#">Communitites</a></li>
+                <li><img src="Music.svg" class="AsideImg"><a href="#">Music</a></li>
+                <li><img src="Photo.svg" class="AsideImg"><a href="#">Photos</a></li>
+                <li><img src="Video.svg" class="AsideImg"><a href="#">Videos</a></li>
+            </ul>
+
+            <div class="audio">
+                <img src="Audio.jpg" class="Cover">
+
+                <div class="NameOfMusic">
+                    <p class="Artist">unxknow</p>
+                    <p class="SoundName">На корвалоле</p>
+                </div>
+
+                <img src="Arrow-left.svg" class="Arrow-left">
+                <img src="Pause.svg" class="Pause">
+                <img src="Arrow-right.svg" class="Arrow-right">
+            </div>
+        </aside>
+
+        <section class="YourFriends">
+            <div class="Search">
+                <input type="search" placeholder="Search" class="SearchEngine" onclick="firstAnimation(), searchFriend()">
+                <img src="Search.svg" alt="" class="iconSearch">
+            </div>
+
+            <div class="Friends">
+                <div class="unitFriend">
+                    <div class="userFriend">
+                        <a href="#">
+                            <img src="Ava.jpg" alt="" class="imgFriend">
+                        </a>
+                        <div class="NameAndOnlineStatus">
+                            <p class="nameFriend">
+                                <a href="#" class="linkNameOfFriend">
+                                    Kirill Sabaev
+                                </a>
+                            </p>
+
+                            <p class="onlineStatus">
+                                Was online 1 hours ago
+                            </p>
+                        </div>
+
+                        <a href="#">
+                            <img src="sendMessage.svg" alt="" class="iconSendMessage">
+                        </a>
+
+                        <div class="kebab">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="userFriend">
+                        <a href="#">
+                            <img src="Dim.jpg" alt="" class="imgFriend">
+                        </a>
+                        <div class="NameAndOnlineStatus">
+                            <p class="nameFriend">
+                                <a href="#" class="linkNameOfFriend">
+                                    Димас Тройка
+                                </a>
+                            </p>
+
+                            <p class="onlineStatus">
+                                Online
+                            </p>
+                        </div>
+
+                        <a href="#">
+                            <img src="sendMessage.svg" alt="" class="iconSendMessage">
+                        </a>
+
+                        <div class="kebab">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="userFriend">
+                        <a href="#">
+                            <img src="Rus.png" alt="" class="imgFriend">
+                        </a>
+                        <div class="NameAndOnlineStatus">
+                            <p class="nameFriend">
+                                <a href="#" class="linkNameOfFriend">
+                                    Арсений Бордершмель
+                                </a>
+                            </p>
+
+                            <p class="onlineStatus">
+                                Was online 1 days ago
+                            </p>
+                        </div>
+
+                        <a href="#">
+                            <img src="sendMessage.svg" alt="" class="iconSendMessage">
+                        </a>
+
+                        <div class="kebab">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="userFriend">
+                        <a href="#">
+                            <img src="Clown.jpg" alt="" class="imgFriend">
+                        </a>
+                        <div class="NameAndOnlineStatus">
+                            <p class="nameFriend">
+                                <a href="#" class="linkNameOfFriend">
+                                    Саша Тваритин
+                                </a>
+                            </p>
+
+                            <p class="onlineStatus">
+                                Online
+                            </p>
+                        </div>
+
+                        <a href="#">
+                            <img src="sendMessage.svg" alt="" class="iconSendMessage">
+                        </a>
+
+                        <div class="kebab">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="userFriend">
+                        <a href="#">
+                            <img src="Alex.jpg" alt="" class="imgFriend">
+                        </a>
+                        <div class="NameAndOnlineStatus">
+                            <p class="nameFriend">
+                                <a href="#" class="linkNameOfFriend">
+                                    Асасясенко Алекстраза
+                                </a>
+                            </p>
+
+                            <p class="onlineStatus">
+                                Was online 15 minutes ago
+                            </p>
+                        </div>
+
+                        <a href="#">
+                            <img src="sendMessage.svg" alt="" class="iconSendMessage">
+                        </a>
+
+                        <div class="kebab">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="userFriend">
+                        <a href="#">
+                            <img src="lenchik.jpg" alt="" class="imgFriend">
+                        </a>
+                        <div class="NameAndOnlineStatus">
+                            <p class="nameFriend">
+                                <a href="#" class="linkNameOfFriend">
+                                    Еленчик 
+                                </a>
+                            </p>
+
+                            <p class="onlineStatus">
+                                Online
+                            </p>
+                        </div>
+
+                        <a href="#">
+                            <img src="sendMessage.svg" alt="" class="iconSendMessage">
+                        </a>
+
+                        <div class="kebab">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="userFriend">
+                        <a href="#">
+                            <img src="Tmall.jpg" alt="" class="imgFriend">
+                        </a>
+                        <div class="NameAndOnlineStatus">
+                            <p class="nameFriend">
+                                <a href="#" class="linkNameOfFriend">
+                                    Тимол Хасанов
+                                </a>
+                            </p>
+
+                            <p class="onlineStatus">
+                                Was online 1 hours ago
+                            </p>
+                        </div>
+
+                        <a href="#">
+                            <img src="sendMessage.svg" alt="" class="iconSendMessage">
+                        </a>
+
+                        <div class="kebab">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="userFriend">
+                        <a href="#">
+                            <img src="Alex.jpg" alt="" class="imgFriend">
+                        </a>
+                        <div class="NameAndOnlineStatus">
+                            <p class="nameFriend">
+                                <a href="#" class="linkNameOfFriend">
+                                    Асасясенко Алекстраза
+                                </a>
+                            </p>
+
+                            <p class="onlineStatus">
+                                Was online 15 minutes ago
+                            </p>
+                        </div>
+
+                        <a href="#">
+                            <img src="sendMessage.svg" alt="" class="iconSendMessage">
+                        </a>
+
+                        <div class="kebab">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="right-side">
+            <h2 class="headingUsersActions">
+                Users actions
+            </h2>
+
+            <p>
+                <a href="#" class="linkAllUsers">
+                    All users
+                </a>
+            </p>
+
+            <div class="unitFriendsRequest">
+                <div class="headingFriendsRequest">
+                    <p class="statusOfAddFriends">
+                        +12
+                    </p>
+
+                    <p>
+                        <a href="#" class="headRequests">
+                            Friend requests
+                        </a>
+                    </p>
+
+                    <img src="arrowFriendsRequests.svg" alt=""  id = "arrowPopupFriendsRequests" class="">
+                </div>
+
+                <div class="unitPossibleFriends">
+                    <div class="userAddedFriend">
+                        <div class="avaNameUserAddedFriend">
+                            <img src="Ava.jpg" alt="" class="avaUserAddedFriend">
+                            <p class="nameUserAddedFriend">
+                                <a href="#">
+                                    Kirill Sabaev
+                                </a>
+                            </p>
+                        </div>
+                        <div class="kebabUserAdd">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="userAddedFriend">
+                        <div class="avaNameUserAddedFriend">
+                            <img src="Ava.jpg" alt="" class="avaUserAddedFriend">
+                            <p class="nameUserAddedFriend">
+                                <a href="#">
+                                    Kirill Sabaev
+                                </a>
+                            </p>
+                        </div>
+                        <div class="kebabUserAdd">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="userAddedFriend">
+                        <div class="avaNameUserAddedFriend">
+                            <img src="Ava.jpg" alt="" class="avaUserAddedFriend">
+                            <p class="nameUserAddedFriend">
+                                <a href="#">
+                                    Kirill Sabaev
+                                </a>
+                            </p>
+                        </div>
+                        <div class="kebabUserAdd">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="userAddedFriend">
+                        <div class="avaNameUserAddedFriend">
+                            <img src="Ava.jpg" alt="" class="avaUserAddedFriend">
+                            <p class="nameUserAddedFriend">
+                                <a href="#">
+                                    Kirill Sabaev
+                                </a>
+                            </p>
+                        </div>
+                        <div class="kebabUserAdd">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="userAddedFriend">
+                        <div class="avaNameUserAddedFriend">
+                            <img src="Ava.jpg" alt="" class="avaUserAddedFriend">
+                            <p class="nameUserAddedFriend">
+                                <a href="#">
+                                    Kirill Sabaev
+                                </a>
+                            </p>
+                        </div>
+                        <div class="kebabUserAdd">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        let inputSearchFriends = document.querySelector(".SearchEngine");
+        let mainDiv = document.querySelector(".Search");
+
+        function firstAnimation() {
+            mainDiv.style.cssText += "width: 620px;";
+            inputSearchFriends.style.cssText += "width: 620px;" 
+        }
+    </script>
+
+    <script>
+        function searchFriend () {
+            let inputSearchFriends = document.querySelector(".SearchEngine");
+            let mainDiv = document.querySelector(".Search");
+
+            inputSearchFriends.onfocus = function () {
+                mainDiv.style.cssText += "width: 620px;";
+                inputSearchFriends.style.cssText += "width: 620px;"
+                // this.classList.toggle("widthSearch");
+            };
+
+            inputSearchFriends.onblur = function () {
+                // inputSearchFriends.classList.remove("widthSearch");
+                inputSearchFriends.style.cssText += "width: 196px;"
+                mainDiv.style.cssText += "width: 220px;";
+            };
+            
+        }
+    </script>
+
+    <script>
+        
+            let popupArrow = document.querySelector("#arrowPopupFriendsRequests");
+            let unitFriends = document.querySelector(".unitPossibleFriends");
+            
+            // Скрывание блока с добавляющимися друзьями
+            popupArrow.addEventListener("click", function() {
+                unitFriends.classList.toggle("none");
+                
+            });
+
+            // Поворот стрелочки
+            popupArrow.addEventListener("click", function() {
+            
+                if (popupArrow.className != "rotate") {
+                    popupArrow.classList.remove("rotateAgain")
+                    popupArrow.classList.add("rotate");
+                }
+
+                else if (popupArrow.className == "rotate") {
+                    
+                    popupArrow.classList.add("rotateAgain");
+                    popupArrow.classList.remove("rotate");
+                }
+            });
+        
+    </script>
+</body>
+
+</html>
